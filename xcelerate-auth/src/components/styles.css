@@ -1,0 +1,342 @@
+/* General Styles */
+.checkbox-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    margin-top: 10px;
+    gap: 8px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkbox-container label {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    cursor: pointer;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);    font-family: "Maven pro";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.fb {
+    display: flex;
+    align-items: center;
+}
+
+.form-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 95%;
+    text-align: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    color: white;
+}
+
+input {
+    width: 93%;
+    padding: 12px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="checkbox"] {
+    width: 15px;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.5);
+    color: black; 
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn {
+    background: linear-gradient(135deg, #ffa01c, #ff6b6b);
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #ff6b6b, #ff9f1c);
+    box-shadow: 0px 5px 15px rgba(255, 107, 107, 0.5); 
+}
+
+/* Navigation */
+.nav-links {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Players Tab */
+.players-tab {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    max-height: 400px; /* Adjust height if needed */
+    overflow-y: auto; /* Enables vertical scrolling */
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+/* Fixed table header */
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #007bff;
+    color: white;
+    z-index: 2;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table-container {
+        max-height: 300px;
+    }
+
+    table {
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Select Team Tab */
+.select-team-tab ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.select-team-tab li {
+    margin: 10px 0;
+}
+
+/* Team Tab */
+.team-tab ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.team-tab li {
+    margin: 10px 0;
+}
+
+/* Budget Tab */
+.budget-tab {
+    text-align: center;
+}
+
+/* Leaderboard Tab */
+.leaderboard-tab table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard-tab th, .leaderboard-tab td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.leaderboard-tab th {
+    background-color: #f2f2f2;
+}
+
+/* Spiriter Chatbot */
+.spiriter-chatbot {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.chat-window {
+    height: 300px;
+    border: 1px solid #ddd;
+    overflow-y: scroll;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.message.user {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+.message.bot {
+    background-color: #f2f2f2;
+    color: black;
+    align-self: flex-start;
+}
+
+.chat-input {
+    display: flex;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    margin-left: 10px;
+}
+
+/* Error Messages */
+.error {
+    color: #ff3b3b;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Sign-in Link */
+.signin {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signin a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.signin a:hover {
+    color: #ff3b3b;
+}
+
+/* Floating Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+body::after, body::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    z-index: 0;
+}
